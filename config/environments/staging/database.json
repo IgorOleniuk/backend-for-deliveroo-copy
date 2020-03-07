@@ -2,6 +2,21 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "${process.env.DATABASE_HOST || 'ds131676.mlab.com'}",
+        "port": "${process.env.DATABASE_PORT || 31914}",
+        "database": "${process.env.DATABASE_NAME || 'heroku_qnncjj2v'}",
+        "username": "${process.env.DATABASE_USERNAME || 'heroku_qnncjj2v'}",
+        "password": "${process.env.DATABASE_PASSWORD || 'heroku_qnncjj2v'}"
+      },
+      "options": {}
+    }
+  }
+  /*"defaultConnection": "default",
+  "connections": {
+    "default": {
       "connector": "bookshelf",
       "settings": {
         "client": "sqlite",
@@ -13,5 +28,5 @@
       },
       "options": {}
     }
-  }
+  }*/
 }
